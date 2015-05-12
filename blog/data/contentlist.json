@@ -1,0 +1,9 @@
+﻿{
+    "Articles": [
+        {
+            "Title": "Test 1",
+            "Filename": "article1.json",
+            "Category": "test"
+        }
+    ]
+}

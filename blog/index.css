@@ -1,0 +1,49 @@
+﻿/* Sources for css colours
+http://www.w3schools.com/tags/ref_colorpicker.asp?colorhex=00BFFF
+*/
+
+body {
+    background-color: whitesmoke;
+    font-family: tahoma;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+div.content {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    max-width: 1000px;
+    min-width: 400px;
+    background-color: white;
+}
+
+div.left-hand-menu {
+    margin: 0;
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: #F0E0FF;
+    display: block;
+}
+
+div.body {
+    margin: 0;
+    background-color: white;
+    display: block;
+}
+
+div.menu-header {
+    margin-left: 0;
+    margin: 0;
+    padding: 3px;
+    background-color: #D6ADFF;
+    font-size: 1.2em;
+}
+
+ul.menu-list a {
+    text-decoration: none;
+    color: #000000;
+}
