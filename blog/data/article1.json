@@ -1,0 +1,8 @@
+﻿{
+	"Content": [
+		{
+			"Type": "Text",
+			"Html": "Before writing this, I had a look at what other people defined as Minimum Viable Product, in some cases the example is provided as being so minimal that a product doesn't actually do anything other than record the users interaction with the product.  Further reading showed that it meant different things to different people.  The products I work with are not viable unless they perform the key calculations, so i find this definition to be the one that makes the most sense to me (click the quote to see the original post):</br><blockquote><a href='http://practicetrumpstheory.com/minimum-viable-product/' target='_blank'>A Minimum Viable Product is the smallest thing you can build that delivers customer value (and as a bonus captures some of that value back).</a></blockquote></br>For nearly three and a half years I have been leading a large product rewrite of a windows application as a web application that integrates fully with another web application.  Seven months ago we started beta testing with selected clients and despite some issues that had to be fixed, the beta test went well.  Now the sales and marketing team is going to market with what they see as a very strong product that will sell well to our target audience.<br/>"
+		}
+	]
+}
