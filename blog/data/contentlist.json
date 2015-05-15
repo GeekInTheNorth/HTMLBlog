@@ -1,9 +1,16 @@
 ﻿{
     "Articles": [
         {
-            "Title": "Test 1",
-            "Filename": "article1.json",
-            "Category": "test"
+            "Title": "iPads, Surfaces and Tablets! Oh My!",
+            "Filename": "iPadsSurfaceTables.html",
+            "Category": "Technology",
+			"Published": "2014-05-22"
+        },
+		{
+            "Title": "Failing to Identify the Minimum Viable Product",
+            "Filename": "MinimumViableProduct.html",
+            "Category": "Development",
+			"Published": "2014-05-21"
         }
     ]
 }
