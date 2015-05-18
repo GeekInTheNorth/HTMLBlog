@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Stotty - Why not to use Local Collections in LINQ to SQL</title>
+    <link href="../styles/general.css" rel="stylesheet" />
+    <script src="../scripts/jquery-1.11.3.min.js"></script>
+    <script src="../scripts/menu.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="left-hand-menu"></div>
+        <div class="body" id="content-body">
+			<h1>Why not to use In Memory Collections in LINQ to SQL</h1>
+            <p class="published">Published on: May 30, 2015</p>
+            <p></p>
+            <pre>
+var inMemoryCollection = inMemoryCollectionSource.Select(x => x.EmployeeId).ToList();
+
+var emps = (from employee in context.Employees
+            join subRecord in context.EmployeeSubRecord on employee.EmployeeId equals subRecord.EmployeeID into joinedRecords
+            from joined in joinedRecords.DefaultIfEmpty()
+            where employee.IncludeInPayroll && inMemoryCollection.Contains(employee.EmployeeId)
+            select new
+                {
+                    EmployeeId = employee.EmployeeId,
+                    DepartmentId = joined == null || !joined.PayrollDepartmentID.HasValue ? 0 : joined.PayrollDepartmentID.Value,
+                    EmployeeName = employee.EmployeeDescNoID,
+                    DisplayEmployeeId = employee.DisplayEmployeeId,
+                    Forename = employee.Forename,
+                    Surname = employee.Surname
+                }).ToList();
+</pre>            
+            <pre>
+var inMemoryCollection = inMemoryCollectionSource.Select(x => x.EmployeeId).ToList();
+
+var emps = (from employee in context.Employees
+            join subRecord in context.EmployeeSubRecord on employee.EmployeeId equals subRecord.EmployeeID into joinedRecords
+            from joined in joinedRecords.DefaultIfEmpty()
+            where employee.IncludeInPayroll
+            select new
+                {
+                    EmployeeId = employee.EmployeeId,
+                    DepartmentId = joined == null || !joined.PayrollDepartmentID.HasValue ? 0 : joined.PayrollDepartmentID.Value,
+                    EmployeeName = employee.EmployeeDescNoID,
+                    DisplayEmployeeId = employee.DisplayEmployeeId,
+                    Forename = employee.Forename,
+                    Surname = employee.Surname
+                }).ToList();
+
+emps = emps.Where(x => inMemoryCollection.Contains(x.EmployeeId)).ToList();
+</pre>
+
+        </div>
+    </div>
+</body>
+</html>

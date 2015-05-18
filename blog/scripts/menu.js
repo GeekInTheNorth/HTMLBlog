@@ -21,6 +21,11 @@
 });
 
 function PopulateMenu(jsonData) {
+	$("div.left-hand-menu").append('<div class="menu-header">Articles</div>');
+	$("div.left-hand-menu").append('<ul id="menu-articles" class="menu-list"></ul>');
+	$("div.left-hand-menu").append('<div class="menu-header">Categories</div>');
+	$("div.left-hand-menu").append('<ul id="menu-categories" class="menu-list"></ul>');
+	
     var numberOfArticles = jsonData.Articles.length;
     var categories = [];
 
@@ -41,7 +46,7 @@ function PopulateMenu(jsonData) {
     }
 
     for (var categoryLoop = 0; categoryLoop < categories.length; categoryLoop++) {
-        $("#menu-categories").append('<li><a href="#" onclick="javascript: ShowArticlesInCategory(' + categories[categoryLoop] + ');">' + categories[categoryLoop] + '</a></li>');
+        $("#menu-categories").append('<li><a href="' + GetRootPagePath('Categories.html') + '?category=' + categories[categoryLoop] + '");">' + categories[categoryLoop] + '</a></li>');
     }
 }
 
@@ -51,6 +56,15 @@ function GetArticlePath(fileName) {
     if (currentUrl.toLowerCase().indexOf("/articles/") > -1)
         menuPath = "../articles/" + fileName;
 
+    return menuPath;
+}
+
+function GetRootPagePath(fileName) {
+    var menuPath = fileName;
+    var currentUrl = window.location.href;
+    if (currentUrl.toLowerCase().indexOf("/articles/") > -1)
+        menuPath = "../" + fileName;
+    
     return menuPath;
 }
 
