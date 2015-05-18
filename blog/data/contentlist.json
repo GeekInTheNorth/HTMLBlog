@@ -1,6 +1,36 @@
 ﻿{
     "Articles": [
         {
+            "Title": "Why not to use In Memory Collections in LINQ to SQL",
+            "Filename": "Linq2.html",
+            "Category": "Development",
+			"Published": "2015-05-30"
+        },
+		{
+            "Title": "Selecting Parent and Children in LINQ to Entities",
+            "Filename": "Linq1.html",
+            "Category": "Development",
+			"Published": "2014-07-24"
+        },
+		{
+            "Title": "Wicked : A Covert Tale of Morality",
+            "Filename": "Wicked.html",
+            "Category": "Theatre",
+			"Published": "2014-06-14"
+        },
+		{
+            "Title": "Why I Like BDD",
+            "Filename": "WhyILikeBDD.html",
+            "Category": "Development",
+			"Published": "2014-06-12"
+        },
+		{
+            "Title": "Avenue Q",
+            "Filename": "AvenueQ.html",
+            "Category": "Theatre",
+			"Published": "2014-06-06"
+        },
+		{
             "Title": "iPads, Surfaces and Tablets! Oh My!",
             "Filename": "iPadsSurfaceTables.html",
             "Category": "Technology",

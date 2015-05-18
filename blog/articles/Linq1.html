@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Stotty - Selecting Parent and Children in LINQ to Entities</title>
+    <link href="../styles/general.css" rel="stylesheet" />
+    <script src="../scripts/jquery-1.11.3.min.js"></script>
+    <script src="../scripts/menu.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="left-hand-menu"></div>
+        <div class="body" id="content-body">
+			<h1>Selecting Parent and Children in LINQ to Entities</h1>
+            <p class="published">Published on: Jul 24, 2014</p>
+            <p>Recently I wanted to select one or more parent records along with the collection of child records as a property of the parent record using Linq to Entities.  I started out writing something like this:</p>
+            <pre>
+var items = (from item in Context.Items
+             join itemParameters in Context.ItemParameters 
+             on item.ID equals itemParameters.ItemId
+             select new
+                 {
+                     item.ItemType,
+                     item.CreatedBy,
+                     item.ItemCreatedDate,
+                     itemParameters
+                 }).ToList();
+            </pre>
+            <p>This came with it's own problem in that it returned a parent for each child on a one to one relationship and what I wanted was a one to many parent to child relationship. After a lot of unhappy googling I did find the following solution:</p>
+            <pre>
+var items = (from item in Context.Items
+             select new
+                 {
+                     item.ItemType,
+                     item.CreatedBy,
+                     item.ItemCreatedDate,
+                     Parameters = (from itemParams in Context.ItemParameters
+                                   where itemParams.BackgroundTaskID == item.ID
+                                   select itemParams)
+                 }).ToList();
+            </pre>
+            <p>A couple of notes regarding this ... I needed to translate the returned data into an object model which had enumerations as properties, when doing this I encountered a couple of issues. Using a Linq select operator on the anonymous object's child collection failed at run time, though it does compile. The same applies to using a ToList() statement on the sub-select in the initial Linq query.</p>
+            <p>I wouldn't have thought to blog something like this, but after sitting in <a title="Terence Eden" href="https://twitter.com/edent" target="_blank">Terence Eden</a>'s session at BCS SPA Conference I felt I ought to. For reference his talk was entitled "Why aren't you blogging? (you selfish jerk)"</p>
+        </div>
+    </div>
+</body>
+</html>

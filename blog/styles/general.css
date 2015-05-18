@@ -72,11 +72,21 @@ blockquote {
      color: #000000;
  }
 
- pre code {
+ pre {
      font-family: monospace;
+     overflow-x: auto;
  }
 
- p.published {
+ p.published, span.published {
      color: darkgray;
      font-style: italic;
+ }
+
+ div.article-description {
+     margin-bottom: 10px;
+ }
+
+ a.article-title {
+     font-size: 1.5em;
+     text-decoration: none;
  }
