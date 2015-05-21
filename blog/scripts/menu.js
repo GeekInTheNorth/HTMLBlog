@@ -26,7 +26,10 @@ function PopulateMenu(jsonData) {
 	$("div.left-hand-menu").append('<ul id="menu-articles" class="menu-list"></ul>');
 	$("div.left-hand-menu").append('<div class="menu-header">Categories</div>');
 	$("div.left-hand-menu").append('<ul id="menu-categories" class="menu-list"></ul>');
-	
+	$("div.left-hand-menu").append('<div class="menu-header">Links</div>');
+	$("div.left-hand-menu").append('<ul id="menu-links" class="menu-list"></ul>');
+	$("#menu-links").append('<li><a href="' + GetRootPagePath('Categories.html') + '?category=ALL");">Archive</a></li>');
+
     var numberOfArticles = jsonData.Articles.length;
     var categories = [];
 
