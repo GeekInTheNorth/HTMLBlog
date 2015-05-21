@@ -21,6 +21,7 @@
 });
 
 function PopulateMenu(jsonData) {
+    $("div.left-hand-menu").append('<a href="' + GetRootPagePath('index.html') + '" class="menu-home-link"><img src=' + GetRootPagePath('images/TrooperAndMeSmall.jpg') + ' alt="Trooper And Me"/></a>');
 	$("div.left-hand-menu").append('<div class="menu-header">Articles</div>');
 	$("div.left-hand-menu").append('<ul id="menu-articles" class="menu-list"></ul>');
 	$("div.left-hand-menu").append('<div class="menu-header">Categories</div>');
