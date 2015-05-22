@@ -21,14 +21,12 @@
 });
 
 function PopulateMenu(jsonData) {
-    $("div.left-hand-menu").append('<a href="' + GetRootPagePath('index.html') + '" class="menu-home-link"><img src=' + GetRootPagePath('images/TrooperAndMeSmall.jpg') + ' alt="Trooper And Me"/></a>');
-	$("div.left-hand-menu").append('<div class="menu-header">Articles</div>');
-	$("div.left-hand-menu").append('<ul id="menu-articles" class="menu-list"></ul>');
-	$("div.left-hand-menu").append('<div class="menu-header">Categories</div>');
-	$("div.left-hand-menu").append('<ul id="menu-categories" class="menu-list"></ul>');
-	$("div.left-hand-menu").append('<div class="menu-header">Links</div>');
-	$("div.left-hand-menu").append('<ul id="menu-links" class="menu-list"></ul>');
+    $("div.left-hand-menu").append('<div class="menu-container"><a href="' + GetRootPagePath('index.html') + '" class="menu-home-link" style="background-image: url(' + GetRootPagePath('images/TrooperAndMeSmall.jpg') + ');"></a><div class="menu-body" id="menu-header-links"></div></a>');
+	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Articles</div><div class="menu-body"><ul id="menu-articles" class="menu-list"></ul></div></div>');
+	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Categories</div><div class="menu-body"><ul id="menu-categories" class="menu-list"></ul></div></div>');
+	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Links</div><div class="menu-body"><ul id="menu-links" class="menu-list"></ul></div></div>');
 	$("#menu-links").append('<li><a href="' + GetRootPagePath('Categories.html') + '?category=ALL");">Archive</a></li>');
+	$("#menu-header-links").append('<a href="https://twitter.com/GeekInTheNorth" class="social-media-link" style="background-image: url(' + GetRootPagePath('images/twitter.png') + ');" target="_BLANK" title="Twitter"></a>');
 
     var numberOfArticles = jsonData.Articles.length;
     var categories = [];

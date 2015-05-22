@@ -5,7 +5,10 @@ http://www.w3schools.com/tags/ref_colorpicker.asp?colorhex=00BFFF
 body {
     background-color: whitesmoke;
     font-family: tahoma, trebuchet ms, arial;
-    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0;
+    margin-right: 0;
     font-size: 1em;
 }
 
@@ -15,26 +18,25 @@ div.content {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    max-width: 1000px;
-    min-width: 400px;
-    background-color: white;
     height: auto;
+    width: 1020px;
 }
 
 div.left-hand-menu {
     margin: 0;
+    margin-right: 2px;
     float: left;
     width: 200px;
     height: 100%;
-    background-color: #F0E0FF;
     display: block;
     display: table-cell;
 }
 
 div.body {
-    margin: 0;
+    margin: 2px;
+    border: DarkGray 1px solid;
+    border-radius: 5px;
     background-color: white;
-    display: block;
     display: table-cell;
     padding-left: 5px;
     padding-right: 5px;
@@ -43,12 +45,39 @@ div.body {
     width: 800px;
 }
 
+div.menu-container {
+	margin-top: 1px;
+	margin-bottom: 2px;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+}
+
 div.menu-header {
-    margin-left: 0;
     margin: 0;
     padding: 3px;
-    background-color: #D6ADFF;
-    font-size: 1.2em;
+    background-color:cornflowerblue;
+	border: DarkGray 1px solid;
+    color: white;
+    font-weight: bold;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+div.menu-body {
+	margin: 0;
+    padding: 3px;
+	background-color: white;
+	border: DarkGray 1px solid;
+    border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+ul.menu-list {
+    list-style-type: square;
+    padding-left: 30px;
+    margin: 0;
 }
 
 ul.menu-list a {
@@ -79,6 +108,7 @@ blockquote {
      width: 775px;
      border: darkgray 1px dashed;
      padding: 5px;
+	 border-radius: 5px;
  }
 
  p.published, span.published {
@@ -95,12 +125,24 @@ blockquote {
      text-decoration: none;
  }
 
- a.menu-home-link {
-     text-decoration: none;
- }
-
-a.menu-home-link img {
-    border: none;
+a.menu-home-link {
+    text-decoration: none;
     margin: 0;
     padding: 0;
- }
+    width: 200px;
+    height: 115px;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+a.social-media-link {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-size: 30px 30px;
+    border-radius: 20px;
+}
