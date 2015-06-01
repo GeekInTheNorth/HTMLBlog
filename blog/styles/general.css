@@ -138,11 +138,11 @@ a.menu-home-link {
 
 a.social-media-link {
     text-decoration: none;
-    margin: 0;
+    margin: 0 2px 0 2px;
     padding: 0;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: block;
-    background-size: 30px 30px;
-    border-radius: 20px;
+    background-size: 40px 40px;
+    display: inline-block;
 }
