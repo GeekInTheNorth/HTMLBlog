@@ -21,7 +21,7 @@
 });
 
 function PopulateMenu(jsonData) {
-    $("div.left-hand-menu").append('<div class="menu-container"><a href="' + GetRootPagePath('index.html') + '" class="menu-home-link" style="background-image: url(' + GetRootPagePath('images/TrooperAndMeSmall.jpg') + ');"></a><div class="menu-body" id="menu-header-links"></div></a>');
+    $("div.left-hand-menu").append('<div class="menu-container"><a href="' + GetRootPagePath('index.html') + '" class="menu-home-link" style="background-image: url(' + GetRootPagePath('images/TrooperAndMeSmall.png') + '); background-size: cover;"></a><div class="menu-body" id="menu-header-links"></div></a>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Articles</div><div class="menu-body"><ul id="menu-articles" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Categories</div><div class="menu-body"><ul id="menu-categories" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Links</div><div class="menu-body"><ul id="menu-links" class="menu-list"></ul></div></div>');

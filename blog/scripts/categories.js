@@ -1,6 +1,6 @@
 ﻿$(document).ready(function() {
     var urlVars = getUrlVars();
-    var category = urlVars["category"];
+    var category = unescape(urlVars["category"]);
 
     if (category == "ALL")
         $("#content-body").append('<h1>Archive</h1>');

@@ -101,7 +101,7 @@ blockquote {
      text-decoration: none;
      color: #000000;
  }
-
+ 
  pre {
      font-family: monospace;
      overflow-x: auto;
@@ -111,7 +111,7 @@ blockquote {
 	 border-radius: 5px;
  }
 
- p.published, span.published {
+ p.published, span.published, p.quote-source {
      color: darkgray;
      font-style: italic;
  }
@@ -145,4 +145,16 @@ a.social-media-link {
     display: block;
     background-size: 40px 40px;
     display: inline-block;
+}
+
+a.article-link {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+img.article-image, img.article-preview {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
 }
