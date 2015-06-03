@@ -2,10 +2,7 @@
     var urlVars = getUrlVars();
     var category = unescape(urlVars["category"]);
 
-    if (category == "ALL")
-        $("#content-body").append('<h1>Archive</h1>');
-    else
-        $("#content-body").append('<h1>Category: ' + category + '</h1>');
+    $("#content-body").append('<h1>Category: ' + category + '</h1>');
 
     var menuPath = "./data/contentlist.json";
     var currentUrl = window.location.href;
@@ -45,7 +42,7 @@ function PopulateCategoryPostList(jsonData, category) {
     for (var loop = 0; loop < numberOfArticles; loop++) {
         var article = jsonData.Articles[loop];
 
-        if ((category.toLowerCase() == article.Category.toLowerCase()) || (category == "ALL"))
+        if ((category.toLowerCase() == article.Category.toLowerCase()) || (category.toLowerCase() == "all"))
             $("#content-body").append('<div class="article-description"><a href="' + GetArticlePath(article.Filename) + '");" class="article-title">' + article.Title + '</a><br><span class="published">Published: ' + article.Published + '</span></div>');
     }
 }
