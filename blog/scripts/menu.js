@@ -25,7 +25,8 @@ function PopulateMenu(jsonData) {
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Articles</div><div class="menu-body"><ul id="menu-articles" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Categories</div><div class="menu-body"><ul id="menu-categories" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Links</div><div class="menu-body"><ul id="menu-links" class="menu-list"></ul></div></div>');
-	$("#menu-links").append('<li><a href="' + GetRootPagePath('Categories.html') + '?category=ALL");">Archive</a></li>');
+	$("#menu-categories").append('<li><a href="' + GetRootPagePath('Categories.html') + '?category=All");">All</a></li>');
+	$("#menu-links").append('<li><a href="http://thenorthcode.net/");" target="_blank">The North Code</a></li>');
 	$("#menu-header-links").append('<a href="https://twitter.com/GeekInTheNorth" class="social-media-link" style="background-image: url(' + GetRootPagePath('images/twitter.png') + ');" target="_BLANK" title="Twitter"></a>');
 	$("#menu-header-links").append('<a href="https://github.com/GeekInTheNorth" class="social-media-link" style="background-image: url(' + GetRootPagePath('images/github.png') + ');" target="_BLANK" title="GitHub"></a>');
 
