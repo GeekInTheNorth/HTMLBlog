@@ -59,7 +59,7 @@ function DrawArticlePreview(articleHtml, fileName, title) {
         for (var i = 0; i < paragraphs.length; i++) {
             if (paragraphs[i].className == "published")
                 continue;
-            articlePreview += '<p>' + paragraphs[i].innerText + '</p>';
+            articlePreview += '<p>' + $(paragraphs[i]).text() + '</p>';
             break;
         }
     }
