@@ -21,7 +21,16 @@
 });
 
 function PopulateMenu(jsonData) {
-    $("div.left-hand-menu").append('<div class="menu-container"><a href="' + GetRootPagePath('index.html') + '" class="menu-home-link" style="background-image: url(' + GetRootPagePath('images/TrooperAndMeSmall.png') + ');"></a><div class="menu-body" id="menu-header-links"></div></a>');
+    var menuHomeImage = "images/TrooperAndMe_small.png";
+    var twitterImage = "images/twitter.png";
+    var gitHubImage = "images/github.png";
+    if (IsUsingIE()) {
+        menuHomeImage = "images/TrooperAndMe_tiny.png";
+        twitterImage = "images/twitter_tiny.png";
+        gitHubImage = "images/github_tiny.png";
+    }
+
+    $("div.left-hand-menu").append('<div class="menu-container"><a href="' + GetRootPagePath('index.html') + '" class="menu-home-link" style="background-image: url(' + GetRootPagePath(menuHomeImage) + ');"></a><div class="menu-body" id="menu-header-links"></div></a>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Articles</div><div class="menu-body"><ul id="menu-articles" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Categories</div><div class="menu-body"><ul id="menu-categories" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Links</div><div class="menu-body"><ul id="menu-links" class="menu-list"></ul></div></div>');
@@ -30,8 +39,8 @@ function PopulateMenu(jsonData) {
 	$("#menu-links").append('<li><a href="http://thenorthcode.net/" target="_blank">Rob Bollons<br/>(The North Code)</a></li>');
 	$("#menu-links").append('<li><a href="https://mark11h.wordpress.com/" target="_blank">Mark Hinchliffe</a></li>');
 	$("#menu-links").append('<li><a href="http://spatterson.me.uk/" target="_blank">Steve Patterson<br/>(The Porridge Box)</a></li>');
-	$("#menu-header-links").append('<a href="https://twitter.com/GeekInTheNorth" class="social-media-link" style="background-image: url(' + GetRootPagePath('images/twitter.png') + ');" target="_BLANK" title="Twitter"></a>');
-	$("#menu-header-links").append('<a href="https://github.com/GeekInTheNorth" class="social-media-link" style="background-image: url(' + GetRootPagePath('images/github.png') + ');" target="_BLANK" title="GitHub"></a>');
+	$("#menu-header-links").append('<a href="https://twitter.com/GeekInTheNorth" class="social-media-link" style="background-image: url(' + GetRootPagePath(twitterImage) + ');" target="_BLANK" title="Twitter"></a>');
+	$("#menu-header-links").append('<a href="https://github.com/GeekInTheNorth" class="social-media-link" style="background-image: url(' + GetRootPagePath(gitHubImage) + ');" target="_BLANK" title="GitHub"></a>');
 
     var numberOfArticles = jsonData.Articles.length;
     var categories = [];
@@ -77,4 +86,14 @@ function GetRootPagePath(fileName) {
 
 function DisplayConnectionError() {
     
+}
+
+function IsUsingIE() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))
+        return true;
+
+    return false;
 }
