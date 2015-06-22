@@ -24,10 +24,12 @@ function PopulateMenu(jsonData) {
     var menuHomeImage = "images/TrooperAndMe_small.png";
     var twitterImage = "images/twitter.png";
     var gitHubImage = "images/github.png";
+	var linkedInImage = "images/linkedin.png";
     if (IsUsingIE()) {
         menuHomeImage = "images/TrooperAndMe_tiny.png";
         twitterImage = "images/twitter_tiny.png";
         gitHubImage = "images/github_tiny.png";
+		linkedInImage = "images/linkedin_tiny.png";
     }
 
     $("div.left-hand-menu").append('<div class="menu-container"><a href="' + GetRootPagePath('index.html') + '" class="menu-home-link" style="background-image: url(' + GetRootPagePath(menuHomeImage) + ');"></a><div class="menu-body" id="menu-header-links"></div></a>');
@@ -41,6 +43,7 @@ function PopulateMenu(jsonData) {
 	$("#menu-links").append('<li><a href="http://spatterson.me.uk/" target="_blank">Steve Patterson<br/>(The Porridge Box)</a></li>');
 	$("#menu-header-links").append('<a href="https://twitter.com/GeekInTheNorth" class="social-media-link" style="background-image: url(' + GetRootPagePath(twitterImage) + ');" target="_BLANK" title="Twitter"></a>');
 	$("#menu-header-links").append('<a href="https://github.com/GeekInTheNorth" class="social-media-link" style="background-image: url(' + GetRootPagePath(gitHubImage) + ');" target="_BLANK" title="GitHub"></a>');
+	$("#menu-header-links").append('<a href="https://www.linkedin.com/profile/view?id=341246471&trk=nav_responsive_tab_profile" class="social-media-link" style="background-image: url(' + GetRootPagePath(linkedInImage) + ');" target="_BLANK" title="LinkedIn"></a>');
 
     var numberOfArticles = jsonData.Articles.length;
     var categories = [];
