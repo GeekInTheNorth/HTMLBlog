@@ -1,5 +1,11 @@
 ﻿{
   "Articles": [
+	{
+		"Title": "Ceroc Northern Champs 2015",
+		"Filename": "CerocNorthernChamps2015.html",
+		"Category": "Dance",
+		"Published": "2015-07-13"
+	},
     {
       "Title": "How not to use Includes in Lambda Statements",
       "Filename": "Linq3.html",

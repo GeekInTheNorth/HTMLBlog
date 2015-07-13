@@ -164,10 +164,22 @@ img.article-image, img.article-preview {
     border: none;
 }
 
+img.article-preview {
+    max-height: 300px;
+}
+
 img.raspberry-pi-logo {
 	max-width: 100px;
 	border: none;
 	display: block;
 	margin-left: auto;
     margin-right: auto;
+}
+
+iframe.article-video {
+    width: 700px;
+    height: 394px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inherit;
 }
