@@ -1,6 +1,12 @@
 ﻿{
   "Articles": [
 	{
+		"Title": "Testing Solutions: Faking Communication with a Third Party Service",
+		"Filename": "FakingAThirdPartyService.html",
+		"Category": "Development",
+		"Published": "2015-07-27"
+	},
+	{
 		"Title": "Ceroc Northern Champs 2015",
 		"Filename": "CerocNorthernChamps2015.html",
 		"Category": "Dance",

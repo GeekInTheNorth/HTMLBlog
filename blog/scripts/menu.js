@@ -52,7 +52,7 @@ function PopulateMenu(jsonData) {
     if (maximumArticlesToDisplay > 5) maximumArticlesToDisplay = 5;
 
     for (var loop = 0; loop < numberOfArticles; loop++) {
-        if (loop <= maximumArticlesToDisplay) {
+        if (loop < maximumArticlesToDisplay) {
             var title = jsonData.Articles[loop].Title;
             var fileName = jsonData.Articles[loop].Filename;
 
