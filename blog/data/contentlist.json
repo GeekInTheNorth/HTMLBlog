@@ -1,6 +1,12 @@
 ﻿{
   "Articles": [
 	{
+		"Title": "Why I Won't Get a PCP Scheme Again",
+		"Filename": "NotDoingPCPSchemesAgain.html",
+		"Category": "Finance",
+		"Published": "2015-08-17"
+	},
+	{
 		"Title": "Testing Solutions: Faking Communication with a Third Party Service",
 		"Filename": "FakingAThirdPartyService.html",
 		"Category": "Development",
