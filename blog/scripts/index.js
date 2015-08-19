@@ -64,7 +64,9 @@ function DrawArticlePreview(articleHtml, fileName, title) {
         }
     }
 
-    articlePreview += '<a href="articles/' + fileName + '" class="article-link">Read More</a>';
+	var linkId = "article-preview-" + fileName.toLowerCase().replace(".html", "");
+	
+    articlePreview += '<a id="' + linkId + '" href="articles/' + fileName + '" class="article-link">Read More</a>';
 
     articlePreview += '</div>';
 	$("#content-body").append(articlePreview);
