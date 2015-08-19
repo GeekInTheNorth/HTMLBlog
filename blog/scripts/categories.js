@@ -41,8 +41,9 @@ function PopulateCategoryPostList(jsonData, category) {
 
     for (var loop = 0; loop < numberOfArticles; loop++) {
         var article = jsonData.Articles[loop];
+        var linkId = "category-article-" + article.Filename.toLowerCase().replace(".html", "");
 
         if ((category.toLowerCase() == article.Category.toLowerCase()) || (category.toLowerCase() == "all"))
-            $("#content-body").append('<div class="article-description"><a href="' + GetArticlePath(article.Filename) + '");" class="article-title">' + article.Title + '</a><br><span class="published">Published: ' + article.Published + '</span></div>');
+            $("#content-body").append('<div class="article-description"><a id="'+ linkId +'" href="' + GetArticlePath(article.Filename) + '");" class="article-title">' + article.Title + '</a><br><span class="published">Published: ' + article.Published + '</span></div>');
     }
 }

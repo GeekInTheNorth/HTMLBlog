@@ -37,7 +37,7 @@ function PopulateMenu(jsonData) {
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Categories</div><div class="menu-body"><ul id="menu-categories" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Links</div><div class="menu-body"><ul id="menu-links" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header-pi">Powered By</div><div class="menu-body"><img src="' + GetRootPagePath('images/RaspberryPi.png') + '" title="Raspberry Pi" class="raspberry-pi-logo"/></div></div>');
-	$("#menu-categories").append('<li><a href="' + GetRootPagePath('Categories.html') + '?category=All");">All</a></li>');
+	$("#menu-categories").append('<li><a id="category-all" href="' + GetRootPagePath('Categories.html') + '?category=All");">All</a></li>');
 	$("#menu-links").append('<li><a href="http://thenorthcode.net/" target="_blank">Rob Bollons<br/>(The North Code)</a></li>');
 	$("#menu-links").append('<li><a href="https://mark11h.wordpress.com/" target="_blank">Mark Hinchliffe</a></li>');
 	$("#menu-links").append('<li><a href="http://spatterson.me.uk/" target="_blank">Steve Patterson<br/>(The Porridge Box)</a></li>');
@@ -55,8 +55,9 @@ function PopulateMenu(jsonData) {
         if (loop < maximumArticlesToDisplay) {
             var title = jsonData.Articles[loop].Title;
             var fileName = jsonData.Articles[loop].Filename;
+            var linkId = "article-" + fileName.toLowerCase().replace(".html", "");
 
-            $("#menu-articles").append('<li><a href="'+GetArticlePath(fileName)+'");">' + title + '</a></li>');
+            $("#menu-articles").append('<li><a id="' + linkId + '" href="' + GetArticlePath(fileName) + '");">' + title + '</a></li>');
         }
 
         var inArray = $.inArray(jsonData.Articles[loop].Category, categories);
@@ -65,7 +66,9 @@ function PopulateMenu(jsonData) {
     }
 
     for (var categoryLoop = 0; categoryLoop < categories.length; categoryLoop++) {
-        $("#menu-categories").append('<li><a href="' + GetRootPagePath('Categories.html') + '?category=' + categories[categoryLoop] + '");">' + categories[categoryLoop] + '</a></li>');
+        var categoryLinkId = "category-" + categories[categoryLoop].toLowerCase().replace(/ /g, '-');
+
+        $("#menu-categories").append('<li><a id="' + categoryLinkId + '" href="' + GetRootPagePath('Categories.html') + '?category=' + categories[categoryLoop] + '");">' + categories[categoryLoop] + '</a></li>');
     }
 }
 
