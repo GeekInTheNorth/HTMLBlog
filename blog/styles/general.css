@@ -154,6 +154,7 @@ a.social-media-link {
 a.article-link {
     text-decoration: none;
     color: cornflowerblue;
+    cursor: pointer;
 }
 
 img.article-image, img.article-preview {

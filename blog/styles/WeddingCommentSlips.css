@@ -1,0 +1,29 @@
+﻿div.comment-container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+span.comment-title {
+    font-family: 'French Script MT';
+    font-size: 1.4em;
+    margin-top: 5px;
+}
+
+div.comment-text {
+    border: solid 2px royalblue;
+    margin-bottom: 5px;
+    padding: 3px;
+}
+
+table.comment-options {
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+}
+
+table.comment-options td {
+    border-collapse: collapse;
+    border: none;
+    width: 33%;
+    text-align:center;
+}

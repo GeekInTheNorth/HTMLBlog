@@ -1,6 +1,12 @@
 ﻿{
   "Articles": [
 	{
+		"Title": "Wedding Memories : Comment Slips",
+		"Filename": "WeddingCommentSlips.html",
+		"Category": "The Big Day",
+		"Published": "2015-12-27"
+	},
+  {
 		"Title": "Why I Won't Get a PCP Scheme Again",
 		"Filename": "NotDoingPCPSchemesAgain.html",
 		"Category": "Finance",
