@@ -1,10 +1,15 @@
-﻿div.comment-container {
+﻿@font-face {
+    font-family: 'French Script MT'; /*a name to be used later*/
+    src: url('http://stotty.me.uk/fonts/french-script-mt.ttf'); /*URL to font*/
+}
+
+div.comment-container {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 span.comment-title {
-    font-family: 'French Script MT';
+    font-family: 'French Script MT', Tahoma, sans-serif;
     font-size: 1.4em;
     margin-top: 5px;
 }
