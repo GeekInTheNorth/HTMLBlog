@@ -184,3 +184,42 @@ iframe.article-video {
     margin-right: auto;
     display: inherit;
 }
+
+img.youtube-link {
+    width: 34px;
+    border: none;
+}
+
+img.itunes-link {
+    width: 27px;
+    border: none;
+}
+
+table.content-list {
+    border: solid 1px DarkGray;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+table.content-list td, table.content-list th {
+    vertical-align: central;
+    border: solid 1px DarkGray;
+    text-align: left;
+    padding: 2px;
+}
+
+table.content-list th {
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: bold;
+}
+
+table.content-list tr.row {
+    background-color: white;
+}
+
+table.content-list tr.alt-row {
+    background-color: whitesmoke;
+}
