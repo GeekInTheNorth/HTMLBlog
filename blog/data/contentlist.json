@@ -1,6 +1,12 @@
 ﻿{
   "Articles": [
     {
+      "Title": "Lego Doctor Who",
+      "Filename": "LegoDrWho.html",
+      "Category": "Geek Stories",
+      "Published": "2016-01-28"
+    },
+    {
       "Title": "Wedding Memories : Our Set List",
       "Filename": "WeddingSetList.html",
       "Category": "The Big Day",
