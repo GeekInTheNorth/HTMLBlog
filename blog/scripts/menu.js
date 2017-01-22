@@ -36,7 +36,6 @@ function PopulateMenu(jsonData) {
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Articles</div><div class="menu-body"><ul id="menu-articles" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Categories</div><div class="menu-body"><ul id="menu-categories" class="menu-list"></ul></div></div>');
 	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header">Links</div><div class="menu-body"><ul id="menu-links" class="menu-list"></ul></div></div>');
-	$("div.left-hand-menu").append('<div class="menu-container"><div class="menu-header-pi">Powered By</div><div class="menu-body"><img src="' + GetRootPagePath('images/RaspberryPi.png') + '" title="Raspberry Pi" class="raspberry-pi-logo"/></div></div>');
 	$("#menu-categories").append('<li><a id="category-all" href="' + GetRootPagePath('Categories.html') + '?category=All");">All</a></li>');
 	$("#menu-links").append('<li><a href="http://thenorthcode.net/" target="_blank">Rob Bollons<br/>(The North Code)</a></li>');
 	$("#menu-links").append('<li><a href="https://mark11h.wordpress.com/" target="_blank">Mark Hinchliffe</a></li>');
