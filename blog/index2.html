@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Stotty</title>
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <aside class="col-12 col-md-2 p-0 bg-dark">
+                <nav class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start">
+                    <div id="menu-category" class="collapse navbar-collapse">
+                        <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                            <template v-for="category in categories">
+                                <li class="nav-item">
+                                    <a v-on:click="menuClick(category)" class="nav-link pl-0">{{ category }}</a>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+            <main class="col">
+                <div id="article-summary-area" class="content" style="display: none;">
+                    <template v-for="post in posts">
+                        <div class="post-preview" v-on:click="summaryClick(post)">
+                            <h4>{{ post.Title }}</h4>
+                            <span class="text-muted small">Published: {{ post.Published }}</span>
+                            <div>{{ post.Preview }}</div>
+                            <img v-bind:src="post.PreviewImage" class="post-preview-image" v-if="hasPreviewImage(post)" />
+                        </div>
+                    </template>
+                </div>
+                <div id="article-area" class="content" style="display: none;">
+                    <h2>{{ post.title }}</h2>
+                    <span class="text-muted small">Published: {{ post.published }}</span><br/>
+                    <span class="text-muted small">Category: {{ post.category }}</span><br/>
+                    <div v-html="marked(post.content)"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js" integrity="sha256-TaLceMwjWRqe4yhbqPOJH6V7UGt5AvvdNfpaIXJWbFU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js" integrity="sha256-JaznSM5IwXQK1AyjtxCTklRL05ar/8zo+oty8fS+AMc=" crossorigin="anonymous"></script>
+    <script src="scripts/site.js"></script>
+  </body>
+</html>
