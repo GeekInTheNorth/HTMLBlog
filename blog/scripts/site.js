@@ -17,36 +17,49 @@ var articleApp = new Vue({
     el: '#article-area',
     data: {
         post: {
-            title: "",
-            category: "",
-            published: "",
-            content: ""
+            Title: "",
+            Category: "",
+            Published: "",
+            Content: "",
+            Preview: "",
+            PreviewImage: "",
+            Carousel: []
         }
     },
     methods: {
         marked: function (input) {
+            if (input === undefined)
+                return "";
+
             return marked(input);
         },
-        articleSelected: function (title, category, filename, published){
-            var url = "articles/" + filename;
+        articleSelected: function (postToDisplay){
+            postToDisplay.Content = "";
+            this.post = postToDisplay;
+            var url = "articles/" + this.post.Filename;
             var xhr = new XMLHttpRequest();
             xhr.overrideMimeType("text/markdown");
             xhr.open("get", url, true);
             xhr.onreadystatechange = function(e) {
                 if (this.readyState == 4 && this.status == 200){
-                    articleApp.showArticle(title, category, published, this.responseText);
+                    articleApp.showArticle(this.responseText);
                 }
             };
             xhr.send();
         },
-        showArticle: function(title, category, published, content){
-            this.post.title = title;
-            this.post.category = category;
-            this.post.published = published;
-            this.post.content = content;
+        showArticle: function(content){
+            this.post.Content = content;
 
             $("#article-summary-area").hide();
             $("#article-area").show();
+        },
+        hasCarousel: function(){
+            if (post.Corusel === undefined)
+                return false;
+            if (post.Corusel.length === 0)
+                return false;
+
+            return true;
         }
     }
 });
@@ -84,7 +97,7 @@ var summaryApp = new Vue({
             return true;
         },
         summaryClick: function(post){
-            articleApp.articleSelected(post.Title, post.Category, post.Filename, post.Published);
+            articleApp.articleSelected(post);
         }
     }
 });
@@ -125,7 +138,7 @@ function LoadSite(data){
             if (article.Title.toLowerCase() === articleRequested.toLowerCase())
             {
                 showHomePage = false;
-                articleApp.articleSelected(article.Title, article.Category, article.Filename, article.Published);
+                articleApp.articleSelected(article);
                 return;
             }
         }

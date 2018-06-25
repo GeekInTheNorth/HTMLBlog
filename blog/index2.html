@@ -42,11 +42,33 @@
             </div>
         </template>
     </div>
+
     <div id="article-area" class="container" style="display: none;">
-        <h2>{{ post.title }}</h2>
-        <span class="text-muted small">Published: {{ post.published }}</span><br/>
-        <span class="text-muted small">Category: {{ post.category }}</span><br/>
-        <div v-html="marked(post.content)"></div>
+        <h2>{{ post.Title }}</h2>
+        <span class="text-muted small">Published: {{ post.Published }}</span><br/>
+        <span class="text-muted small">Category: {{ post.Category }}</span><br/>
+        <div v-html="marked(post.Content)"></div>
+
+        <div id="articleCousel" class="carousel slide" data-ride="carousel" v-show="hasCarousel">
+            <ol class="carousel-indicators">
+                <template v-for="(image,imageIndex) in post.Carousel">
+                    <li data-target="#articleCousel" v-bind:data-slide-to="imageIndex" v-bind:class="imageIndex==0 ? 'active' : ''"></li>
+                </template>
+            </ol>
+            <div class="carousel-inner">
+                <template v-for="(image,imageIndex) in post.Carousel">
+                    <div v-bind:class="imageIndex==0 ? 'carousel-item active' : 'carousel-item'">
+                        <img v-bind:src="image" class="d-block w-100">
+                    </div>
+                </template>
+            </div>
+            <a class="carousel-control-prev" href="#articleCousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#articleCousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -2,10 +2,30 @@
   "Articles": [
     {
       "Title": "Lego Doctor Who",
-      "Filename": "LegoDrWho.html",
+      "Filename": "LegoDrWho.md",
       "Category": "Geek Stories",
       "Published": "2016-01-28",
-      "Preview": ""
+      "Preview": "",
+      "Carousel": [
+        "articles/images/LegoDrWho01.jpg",
+        "articles/images/LegoDrWho02.jpg",
+        "articles/images/LegoDrWho03.jpg",
+        "articles/images/LegoDrWho04.jpg",
+        "articles/images/LegoDrWho05.jpg",
+        "articles/images/LegoDrWho06.jpg",
+        "articles/images/LegoDrWho07.jpg",
+        "articles/images/LegoDrWho08.jpg",
+        "articles/images/LegoDrWho09.jpg",
+        "articles/images/LegoDrWho10.jpg",
+        "articles/images/LegoDrWho11.jpg",
+        "articles/images/LegoDrWho12.jpg",
+        "articles/images/LegoDrWho13.jpg",
+        "articles/images/LegoDrWho14.jpg",
+        "articles/images/LegoDrWho15.jpg",
+        "articles/images/LegoDrWho16.jpg",
+        "articles/images/LegoDrWho17.jpg"
+      ],
+      "PreviewImage": "articles/images/LegoDrWho01.jpg"
     },
     {
       "Title": "Wedding Memories : Our Set List",
