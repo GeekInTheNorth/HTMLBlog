@@ -1,0 +1,19 @@
+div#article-area a[href*='www.youtube.com'],
+div#article-area a[href*='itunes.apple.com']
+{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 20px 20px
+}
+
+div#article-area a[href*='www.youtube.com']
+{
+    background-image: url('/images/YouTube-icon-full_color.png');
+}
+
+div#article-area a[href*='itunes.apple.com']
+{
+    background-image: url('/images/itunes.png');
+}
