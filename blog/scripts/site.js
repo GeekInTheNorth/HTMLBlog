@@ -26,6 +26,11 @@ var articleApp = new Vue({
             Carousel: []
         }
     },
+    updated: function () {
+        // Markdown does not add classes to objects or targets to anchor tags, so we have to do this ourselves.
+        $("div#article-area a").attr("target", "_blank");
+        $("div#article-area table").addClass("table table-hover");
+    },
     methods: {
         marked: function (input) {
             if (input === undefined)
@@ -34,21 +39,20 @@ var articleApp = new Vue({
             return marked(input);
         },
         articleSelected: function (postToDisplay){
-            postToDisplay.Content = "";
-            this.post = postToDisplay;
-            var url = "articles/" + this.post.Filename;
+            var url = "articles/" + postToDisplay.Filename;
             var xhr = new XMLHttpRequest();
             xhr.overrideMimeType("text/markdown");
             xhr.open("get", url, true);
             xhr.onreadystatechange = function(e) {
                 if (this.readyState == 4 && this.status == 200){
-                    articleApp.showArticle(this.responseText);
+                    articleApp.showArticle(postToDisplay, this.responseText);
                 }
             };
             xhr.send();
         },
-        showArticle: function(content){
-            this.post.Content = content;
+        showArticle: function(postToDisplay, content){
+            postToDisplay.Content = content;
+            this.post = postToDisplay;
 
             $("#article-summary-area").hide();
             $("#article-area").show();
@@ -177,5 +181,8 @@ function getUrlVars() {
 }
 
 $(document).ready(function () {
-    GetData("data/contentlist.json", LoadSite);
+    var today = new Date();
+    var contentUrl = "data/contentlist.json?v=" + today.getFullYear() + today.getMonth() + today.getDate() + today.getHours();
+
+    GetData(contentUrl, LoadSite);
 });
