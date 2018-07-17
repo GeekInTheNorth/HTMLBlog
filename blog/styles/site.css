@@ -36,3 +36,8 @@ img.post-preview-image {
 a, .clickable {
     cursor: pointer;
 }
+
+blockquote.blockquote {
+    border-left: 5px solid skyblue;
+    padding-left: 10px;
+}

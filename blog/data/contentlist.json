@@ -120,10 +120,10 @@
     },
     {
       "Title": "Failing to Identify the Minimum Viable Product",
-      "Filename": "MinimumViableProduct.html",
+      "Filename": "MinimumViableProduct.md",
       "Category": "Development",
       "Published": "2014-05-21",
-      "Preview": ""
+      "Preview": "I once led a software development team through a rather extensive product rewrite from being a windows application to a web application.  As a Lead Software Developer with a idea, but with no product team, I started on a long journey without taking the first crucial step."
     }
   ]
 }
