@@ -30,6 +30,8 @@ var articleApp = new Vue({
         // Markdown does not add classes to objects or targets to anchor tags, so we have to do this ourselves.
         $("div#article-area a").attr("target", "_blank");
         $("div#article-area table").addClass("table table-hover");
+        $("div#article-area blockquote").addClass("blockquote");
+        $("div#article-area blockquote p").addClass("mb-0");
     },
     methods: {
         marked: function (input) {
