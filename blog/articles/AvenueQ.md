@@ -1,3 +1,7 @@
+# Avenue Q
+
+Published: Jun 6, 2014
+
 After having listened, sang along to and laughed at the sound track to [Avenue Q](https://twitter.com/avenuequktour) more than a few times, it was finally time to see the show at [Leeds Grand Theatre](https://www.leedsgrandtheatre.com/Online/default.asp), courtesy of my fianc&eacute;e.
 
 ![Avenue Q Cast](articles/images/The-cast-of-Avenue-Q-Photo-Credit-Darren-Bell-2.jpg)

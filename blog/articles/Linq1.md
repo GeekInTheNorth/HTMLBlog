@@ -1,3 +1,7 @@
+# Selecting Parent and Children in LINQ to Entities
+
+Published: Jul 24, 2014
+
 Recently I wanted to select one or more parent records along with the collection of child records as a property of the parent record using Linq to Entities.  I started out writing something like this:
 
 ```C#

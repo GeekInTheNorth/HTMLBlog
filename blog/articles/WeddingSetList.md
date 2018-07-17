@@ -1,3 +1,7 @@
+# Wedding Memories : Our Set List
+
+Published: Dec 28, 2015
+
 While going to Wedding Fairs, we saw a couple of groups who specialised in background wedding music to be played during the Wedding Breakfast. While some of these were really good, we didn't want to hire them.  Budget aside, we wanted our wedding to reflect our passions and personalities, not just in the visual theme, but also in the musical theme.
 
 Knowing we had access to the kit belonging to the venue's resident DJ, we chose to make our own playlist.  This turned out to be harder than we imagined and in the end we produced a set list of 2 hours and 20 minutes, but it easily took us three to four times that to sort it out. Along the way we discarded songs for many reasons, not being significant to us, having lyrics that are too negative or being just too over the top.

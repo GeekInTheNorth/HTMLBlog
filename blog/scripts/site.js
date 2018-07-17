@@ -32,6 +32,7 @@ var articleApp = new Vue({
         $("div#article-area table").addClass("table table-hover");
         $("div#article-area blockquote").addClass("blockquote");
         $("div#article-area blockquote p").addClass("mb-0");
+        $("div#article-area p:contains('Published:')").addClass("text-muted small")
     },
     methods: {
         marked: function (input) {
