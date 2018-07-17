@@ -49,9 +49,6 @@
     </div>
 
     <div id="article-area" class="container" style="display: none;">
-        <h2>{{ post.Title }}</h2>
-        <span class="text-muted small">Published: {{ post.Published }}</span><br/>
-        <span class="text-muted small">Category: {{ post.Category }}</span><br/>
         <div v-html="marked(post.Content)"></div>
 
         <div id="articleCousel" class="carousel slide" data-ride="carousel" v-show="hasCarousel">
