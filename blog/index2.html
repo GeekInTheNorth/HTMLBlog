@@ -35,11 +35,15 @@
 
     <div id="article-summary-area" class="container" style="display: none;">
         <template v-for="post in posts">
-            <div class="post-preview" v-on:click="summaryClick(post)">
-                <h4>{{ post.Title }}</h4>
-                <span class="text-muted small">Published: {{ post.Published }}</span>
-                <div>{{ post.Preview }}</div>
-                <img v-bind:src="post.PreviewImage" class="post-preview-image" v-show="hasPreviewImage(post)" />
+            <div class="row clickable" v-on:click="summaryClick(post)">
+                <div class="col-sm">
+                    <h4>{{ post.Title }}</h4>
+                    <span class="text-muted small">Published: {{ post.Published }}</span>
+                    <div>{{ post.Preview }}</div>
+                </div>
+                <div class="col-sm" v-show="hasPreviewImage(post)">
+                    <img v-bind:src="post.PreviewImage" class="post-preview-image" v-show="hasPreviewImage(post)" />
+                </div>
             </div>
         </template>
     </div>
