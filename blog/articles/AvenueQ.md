@@ -7,7 +7,7 @@ After having listened, sang along to and laughed at the sound track to [Avenue Q
 ![Avenue Q Cast](articles/images/The-cast-of-Avenue-Q-Photo-Credit-Darren-Bell-2.jpg)
 
 For those of you who haven't seen Avenue Q and/or don't know what it is, let me summarise it like so ... imagine Sesame Street aimed at an adult audience. In fact some of the characters are direct parodies of the of Sesame Street characters with Trekkie Monster being a parody of Cookie Monster and Nicky and Rod being parodies of Bert and Earnie.  As with Sesame Street, the cast is made up of both human characters and puppet characters with some of the actors controlling multiple puppets.
-            
+
 I was amazed by how expressive the cast managed to make puppets and how they managed to expand on that with their own expressions. They effectively turned both puppet and the puppeteer into a single character. In some cases the puppets would have two puppeteers, both puppeteers expressed the puppet's emotions The performances of the cast were simply outstanding.
 
 The following is the Synopsis from the official [Avenue Q]("http://www.avenueqthemusical.co.uk/") site:

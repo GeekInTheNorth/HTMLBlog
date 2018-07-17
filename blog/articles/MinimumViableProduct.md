@@ -14,22 +14,22 @@ I didn't know we had to identify Minimum Viable Product, it was a term I was u
 
 I do hold that we are in a good place, and I am very optimistic that the product will perform well.  However in going through this long journey I know now that there are a number of things that I would tackle differently and I do feel that if we had performed these steps that we could have gone to market sooner.
 
-### Step 1 - Customer Research
+## Step 1 - Customer Research
 
 I would review our customer base and profile a number of customers based on the size and complexity of their companies.  From there I would have moved on to communicate with the customers and to profile their use cases for the product.
 
-### Step 2 - Identify Minimum Viable Product
+## Step 2 - Identify Minimum Viable Product
 
 I would review our feature list and cross check that against the use cases from the most basic customers that had been identified previously.  This would have then formed the basis for our Minimum Viable Product.
 
-### Step 3 - Identify Viable Product
+## Step 3 - Identify Viable Product
 
 I would review customer list and work out the Use Cases that fit 80% of our customers, I would then cross reference this with our feature list to create the requirements for our Viable Product which were not contained in our Minimum Viable Product
 
-### Step 4 - Identify Ideal Product
+## Step 4 - Identify Ideal Product
 
 I would review all remaining use cases and cross reference them with what was left outstanding in our feature list.  Any feature which had a use case that was not in either the Viable Product or Minimum Viable Product would be added to our Ideal Product.  All remaining features that had no use case could be forgotten about until such time that a use case for them arose.
 
-### Step 5 - Iterate
+## Step 5 - Iterate
 
 I would do all of the prior steps before to be sure we had it correct.

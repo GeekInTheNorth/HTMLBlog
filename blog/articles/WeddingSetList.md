@@ -7,7 +7,7 @@ While going to Wedding Fairs, we saw a couple of groups who specialised in backg
 Knowing we had access to the kit belonging to the venue's resident DJ, we chose to make our own playlist.  This turned out to be harder than we imagined and in the end we produced a set list of 2 hours and 20 minutes, but it easily took us three to four times that to sort it out. Along the way we discarded songs for many reasons, not being significant to us, having lyrics that are too negative or being just too over the top.
 
 Each track holds some meaning for us, some are from musicals we've seen together, some are tracks we always dance to, some reflect our tastes and passions and some we just out and out love. In some cases we even found alternate versions of a of song to make things more interesting. Our Set List was a labour of our love.
-            
+
 ## Wedding Ceremony
 
 A Thousand Years was played as the Processional song as the bride walked down the isle.  Love Story Meets Love Story was played during the signing of the Register, at just over 6 minutes long it was long enough to cover all of that. Finally, Shut Up and Dance was played as the Recessional Song as we walked back down the isle together with the family in tow.
@@ -42,7 +42,7 @@ A Thousand Years was played as the Processional song as the bride walked down th
 | Beautiful To Me | Olly Murs | [](https://www.youtube.com/watch?v=GuKL8JZMrVY) [](https://itunes.apple.com/gb/album/beautiful-to-me/id1045098497?i=1045098500) |
 | Just The Way You Are | Bruno Mars | [](https://www.youtube.com/watch?v=LjhCEhWiKXk) [](https://itunes.apple.com/gb/album/just-the-way-you-are/id495215040?i=495215114) |
 
-## Wedding Breakfast - Disc 1
+## Wedding Breakfast - Disc 2
 
 Due to the staff forgetting to swap the discs over, we ended up playing this CD during the intermission period between the Wedding Breakfast and the Reception Party.
 
