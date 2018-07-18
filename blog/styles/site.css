@@ -18,6 +18,14 @@ div#article-area a[href*='itunes.apple.com']
     background-image: url('/images/itunes.png');
 }
 
+div#article-area img {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 div#article-summary-area {
     margin: 10px;
 }
@@ -48,3 +56,4 @@ pre {
     padding: 5px;
     padding-left: 10px;
 }
+
