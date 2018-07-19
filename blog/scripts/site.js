@@ -33,6 +33,13 @@ var articleApp = new Vue({
         $("div#article-area blockquote").addClass("blockquote");
         $("div#article-area blockquote p").addClass("mb-0");
         $("div#article-area p:contains('Published:')").addClass("text-muted small")
+
+        var $embeddedVideos = $("div#article-area a[href*='www.youtube.com/embed']");
+        $embeddedVideos.each(function(index, element) {
+            var url = $(element).attr("href");
+            var markUp = "<iframe class='article-video' width='700' height='394' src='" + url + "' frameborder='0' allowfullscreen></iframe>";
+            $(element).replaceWith(markUp);
+        });
     },
     methods: {
         marked: function (input) {
