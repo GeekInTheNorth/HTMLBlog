@@ -1,5 +1,5 @@
-div#article-area a[href*='www.youtube.com'],
-div#article-area a[href*='itunes.apple.com']
+div#article-area table a[href*='www.youtube.com'],
+div#article-area table a[href*='itunes.apple.com']
 {
     width: 20px;
     height: 20px;
@@ -8,17 +8,18 @@ div#article-area a[href*='itunes.apple.com']
     background-size: 20px 20px
 }
 
-div#article-area a[href*='www.youtube.com']
+div#article-area table a[href*='www.youtube.com']
 {
     background-image: url('/images/YouTube-icon-full_color.png');
 }
 
-div#article-area a[href*='itunes.apple.com']
+div#article-area table a[href*='itunes.apple.com']
 {
     background-image: url('/images/itunes.png');
 }
 
 div#article-area img {
+    max-height: 600px;
     max-width: 100%;
     height: auto;
     margin-left: auto;

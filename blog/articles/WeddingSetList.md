@@ -69,4 +69,4 @@ Due to the staff forgetting to swap the discs over, we ended up playing this CD 
 
 Occasionally I like to send my wife lyrics to songs that I really enjoy, or that I find make me think about her. The song we chose for our first dance was one such song, however the version we danced to was an alternative version. A duet between the original artist and my favourite violinist.  It's not available to purchase anywhere, but it is on YouTube.  We had thought our DJ would struggle to get a hold of it, turns out he just downloaded it and stripped out the video.
 
-[![All of Me - John Legend & Lindsey Stirling](https://www.youtube.com/embed/xwsYvBYZcx4)](https://www.youtube.com/embed/xwsYvBYZcx4 "title")
+[All of Me - John Legend & Lindsey Stirling](https://www.youtube.com/embed/xwsYvBYZcx4)
