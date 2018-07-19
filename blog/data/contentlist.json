@@ -71,10 +71,11 @@
     },
     {
       "Title": "Meeting The Ferengi",
-      "Filename": "DeepSpaceNine.html",
+      "Filename": "DeepSpaceNine.md",
       "Category": "Geek Stories",
       "Published": "2015-06-03",
-      "Preview": ""
+      "Preview": "Star Trek has long been on of my geek passions and it was something that I shared with my mother from the beginnings of Star Trek The Next Generation.  Of all the Star Trek series, I enjoyed Deep Space Nine the most as I felt that it brought a little more humanity to the series. However of all the characters in the series, it was the Ferengi family that I liked the most. So when I went to the Sheffield Film and Comic Convention in August 2014 and got to meet Armin Shimerman.",
+      "PreviewImage": "articles/images/ArminAndMe.jpg"
     },
     {
       "Title": "Why not to use In Memory Collections in LINQ to Entities",
