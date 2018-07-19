@@ -22,7 +22,6 @@ Typically in ceroc championships this is referred to as Intermediate. In normal 
 
 Normally in a competition, couples are knocked out with each round. It's entirely possible to have three minutes of song that doesn't work for you get knocked out straight away. The best thing about this category in Northern Champs was that you got to dance to all the tracks and you are given an aggregate score for your performance over each track.
 
-
 Neither my partner or I are greatly polished in our dancing, we like to play around to the music and we don't have any big wow moves. We did get plenty of comments from other people about how good our connection was and how happy and loved up we were in our dancing. We didn't place in this competition so there were no medals for us, but each person who gave us a positive comment was a win as far as I am concerned.
 
 You won't be able to see us very well, we're at the opposite side of the hall, but here we are dancing to our swing track during one of the rounds.
