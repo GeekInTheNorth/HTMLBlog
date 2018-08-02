@@ -1,18 +1,83 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/site.css">
     <title>Stotty</title>
-    <link href="styles/general.css" rel="stylesheet" />
-    <script src="scripts/jquery-1.11.3.min.js"></script>
-    <script src="scripts/menu.js"></script>
-	<script src="scripts/index.js"></script>
-</head>
-<body>
-    <div class="content">
-        <div class="left-hand-menu"></div>
-        <div class="body" id="content-body">
-            
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Stotty</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                    <div id="menu-category" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <template v-for="category in categories">
+                            <li class="nav-item">
+                                <a v-on:click="menuClick(category)" class="dropdown-item">{{ category }}</a>
+                            </li>
+                        </template>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="article-summary-area" class="container" style="display: none;">
+        <template v-for="post in posts">
+            <div class="row clickable" v-on:click="summaryClick(post)">
+                <div class="col-sm">
+                    <h4>{{ post.Title }}</h4>
+                    <span class="text-muted small">Published: {{ post.Published }}</span>
+                    <div>{{ post.Preview }}</div>
+                </div>
+                <div class="col-sm" v-show="hasPreviewImage(post)">
+                    <img v-bind:src="post.PreviewImage" class="post-preview-image" v-show="hasPreviewImage(post)" />
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <div id="article-area" class="container" style="display: none;">
+        <div v-html="marked(post.Content)"></div>
+
+        <div id="articleCousel" class="carousel slide" data-ride="carousel" v-show="hasCarousel">
+            <ol class="carousel-indicators">
+                <template v-for="(image,imageIndex) in post.Carousel">
+                    <li data-target="#articleCousel" v-bind:data-slide-to="imageIndex" v-bind:class="imageIndex==0 ? 'active' : ''"></li>
+                </template>
+            </ol>
+            <div class="carousel-inner">
+                <template v-for="(image,imageIndex) in post.Carousel">
+                    <div v-bind:class="imageIndex==0 ? 'carousel-item active' : 'carousel-item'">
+                        <img v-bind:src="image" class="d-block w-100">
+                    </div>
+                </template>
+            </div>
+            <a class="carousel-control-prev" href="#articleCousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#articleCousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
     </div>
-</body>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js" integrity="sha256-TaLceMwjWRqe4yhbqPOJH6V7UGt5AvvdNfpaIXJWbFU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js" integrity="sha256-JaznSM5IwXQK1AyjtxCTklRL05ar/8zo+oty8fS+AMc=" crossorigin="anonymous"></script>
+    <script src="scripts/site.js"></script>
+  </body>
 </html>
