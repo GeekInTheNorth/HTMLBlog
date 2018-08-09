@@ -64,8 +64,8 @@ var articleApp = new Vue({
             postToDisplay.Content = content;
             this.post = postToDisplay;
 
-            $("#article-summary-area").hide();
             $("#article-area").show();
+            summaryApp.showCategoryArticles(this.post.Category, 3, false);
         },
         hasCarousel: function(){
             if (post.Corusel === undefined)
@@ -84,12 +84,9 @@ var summaryApp = new Vue({
         posts: [ ]
     },
     methods: {
-        categorySelected: function (category){
+        showCategoryArticles: function (category, limit, isCategoryMenu){
             this.posts = [];
-            var limit = 4;
             var articlesDisplayed = 0;
-            if (category !== "Latest")
-                limit = 99;
 
             for (var index in siteSettings.Articles){
                 var article = siteSettings.Articles[index];
@@ -102,8 +99,8 @@ var summaryApp = new Vue({
                     break;
             }
 
-            $("#article-area").hide();
-            $("#article-summary-area").show();
+            if (isCategoryMenu)
+                $("#article-area").hide();
         },
         hasPreviewImage: function (post){
             if (post.PreviewImage === undefined || post.PreviewImage === "")
@@ -132,7 +129,10 @@ var categoryMenuApp = new Vue({
             this.categories.unshift("Latest");
         },
         menuClick: function (category){
-            summaryApp.categorySelected(category);
+            var limit = 9999;
+            if (category == "Latest")
+                limit = 3;
+            summaryApp.showCategoryArticles(category, limit, true);
         }
     }
 });
@@ -159,7 +159,7 @@ function LoadSite(data){
     }
 
     if (showHomePage)
-        summaryApp.categorySelected("Latest");
+        summaryApp.showCategoryArticles("Latest", 3, true);
 }
 
 function getUrlVar(varName){

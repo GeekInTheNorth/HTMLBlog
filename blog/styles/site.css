@@ -1,3 +1,7 @@
+div#article-summary-area {
+    margin-top: 1em;
+}
+
 div#article-area table a[href*='www.youtube.com'],
 div#article-area table a[href*='itunes.apple.com']
 {
@@ -27,15 +31,6 @@ div#article-area img {
     display: block;
 }
 
-div#article-summary-area {
-    margin: 10px;
-}
-
-div#article-summary-area div.row {
-    margin-bottom: 10px;
-    background-color: whitesmoke;
-}
-
 img.post-preview-image {
     object-fit: cover;
     max-height: 300px;
@@ -56,5 +51,97 @@ pre {
     border-left: 5px solid skyblue;
     padding: 5px;
     padding-left: 10px;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+pre code {
+    word-wrap: normal;
+    white-space: pre;
+}
+
+body{ 
+    background-color: #e9eef1;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.grid {
+    background-color: #fff;
+    float: left;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.entry-media img {
+    border-radius: 10px;
+    width: 100%;
+    max-height: 188px;
+}
+
+.entry-body {
+    padding: 27px 10px;
+}
+
+.entry-body .cat {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6220d9;
+    text-transform: uppercase;
+}
+
+.entry-body h3 {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.30em;
+    margin: 3px 0 0.73em;
+}
+
+.entry-body h3 a {
+    color: #41516a;
+}
+
+.entry-body h3 a:hover {
+    color: #6220d9;
+    text-decoration: none;
+}
+
+.entry-body p {
+    margin-bottom: 2em;
+    color: #90949a;
+    line-height: 1.8em;
+}
+
+.read-more-date {
+    position: relative;
+}
+
+.read-more-date .date {
+    position: absolute;
+    right: 0;
+    color: #90949a;
 }
 
