@@ -65,7 +65,7 @@ var articleApp = new Vue({
             this.post = postToDisplay;
 
             $("#article-area").show();
-            summaryApp.showCategoryArticles(this.post.Category, 3, false);
+            summaryApp.showCategoryArticles(this.post.Category, 3, false, this.post.Title);
         },
         hasCarousel: function(){
             if (post.Corusel === undefined)
@@ -84,12 +84,16 @@ var summaryApp = new Vue({
         posts: [ ]
     },
     methods: {
-        showCategoryArticles: function (category, limit, isCategoryMenu){
+        showCategoryArticles: function (category, limit, isCategoryMenu, currentPostTitle){
             this.posts = [];
             var articlesDisplayed = 0;
 
             for (var index in siteSettings.Articles){
                 var article = siteSettings.Articles[index];
+
+                if (!isCategoryMenu && article.Title === currentPostTitle)
+                    continue;
+
                 if (category === "Latest" || category === article.Category){
                     this.posts.push(article);
                     articlesDisplayed++;
@@ -132,7 +136,7 @@ var categoryMenuApp = new Vue({
             var limit = 9999;
             if (category == "Latest")
                 limit = 3;
-            summaryApp.showCategoryArticles(category, limit, true);
+            summaryApp.showCategoryArticles(category, limit, true, null);
         }
     }
 });
@@ -159,7 +163,7 @@ function LoadSite(data){
     }
 
     if (showHomePage)
-        summaryApp.showCategoryArticles("Latest", 3, true);
+        summaryApp.showCategoryArticles("Latest", 3, true, null);
 }
 
 function getUrlVar(varName){
