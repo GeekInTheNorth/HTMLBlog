@@ -66,6 +66,8 @@ var articleApp = new Vue({
 
             $("#article-area").show();
             summaryApp.showCategoryArticles(this.post.Category, 3, false, this.post.Title);
+
+            this.updateMetaTags();
         },
         hasCarousel: function(){
             if (post.Corusel === undefined)
@@ -74,6 +76,18 @@ var articleApp = new Vue({
                 return false;
 
             return true;
+        },
+        updateMetaTags: function() {
+            var articleUrl = window.location.hostname + '/' + this.post.Title.split(' ').join('-');
+            var previewImage = this.post.PreviewImage;
+            if (previewImage === undefined)
+                previewImage = '';
+
+            $('meta[property="og:url"]').attr("content", articleUrl);
+            $('meta[property="og:type"]').attr("content", "Article");
+            $('meta[property="og:title"]').attr("content", this.post.Title);
+            $('meta[property="og:description"]').attr("content", this.post.Preview);
+            $('meta[property="og:image"]').attr("content", previewImage);
         }
     }
 });
@@ -151,6 +165,8 @@ function LoadSite(data){
 
     if (articleRequested !== undefined && articleRequested !== "")
     {
+        articleRequested = articleRequested.split('-').join(' ');
+
         for(var index in siteSettings.Articles){
             var article = siteSettings.Articles[index];
             if (article.Title.toLowerCase() === articleRequested.toLowerCase())
