@@ -31,6 +31,10 @@ div#article-area img {
     display: block;
 }
 
+div.carousel-inner img {
+    object-fit: none !important;
+}
+
 img.post-preview-image {
     object-fit: cover;
     max-height: 300px;
