@@ -1,6 +1,13 @@
 ﻿{
   "Articles": [
     {
+      "Title": "Elastic Search: Boosting Exact Matches Over Partial Matches",
+      "Filename": "ElasticSearchBoostingExactMatches.md",
+      "Category": "Development",
+      "Published": "2018-08-31",
+      "Preview": "A client wanted both exact and partial matches to be returned on a search page using ElasticSearch, but wanted exact matches to be higher up the results as they are more relevant."
+    },
+    {
       "Title": "Lego Doctor Who",
       "Filename": "LegoDrWho.md",
       "Category": "Geek Stories",
