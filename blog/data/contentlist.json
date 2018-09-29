@@ -1,6 +1,13 @@
 ﻿{
   "Articles": [
     {
+      "Title": "Unit Testing EPiServer: Custom Visitor Group Criterion",
+      "Filename": "UnitTestingEPiServer1.md",
+      "Category": "Development",
+      "Published": "2018-09-29",
+      "Preview": ""
+    },
+    {
       "Title": "Elastic Search: Boosting Exact Matches Over Partial Matches",
       "Filename": "ElasticSearchBoostingExactMatches.md",
       "Category": "Development",
