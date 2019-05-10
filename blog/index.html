@@ -35,48 +35,44 @@
 
     <div class="container">
 
-        <div id="article-area" class="row" style="display: none;">
-            <div class="grid">
-                <div v-html="marked(post.Content)"></div>
+        <div id="article-area" class="article-content row" style="display: none;">
+            <div v-html="marked(post.Content)"></div>
 
-                <div id="articleCousel" class="carousel slide" data-ride="carousel" v-show="hasCarousel">
-                    <ol class="carousel-indicators">
-                        <template v-for="(image,imageIndex) in post.Carousel">
-                            <li data-target="#articleCousel" v-bind:data-slide-to="imageIndex" v-bind:class="imageIndex==0 ? 'active' : ''"></li>
-                        </template>
-                    </ol>
-                    <div class="carousel-inner">
-                        <template v-for="(image,imageIndex) in post.Carousel">
-                            <div v-bind:class="imageIndex==0 ? 'carousel-item active' : 'carousel-item'">
-                                <img v-bind:src="image" class="d-block w-100">
-                            </div>
-                        </template>
-                    </div>
-                    <a class="carousel-control-prev" href="#articleCousel" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#articleCousel" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
+            <div id="articleCousel" class="carousel slide" data-ride="carousel" v-show="hasCarousel">
+                <ol class="carousel-indicators">
+                    <template v-for="(image,imageIndex) in post.Carousel">
+                        <li data-target="#articleCousel" v-bind:data-slide-to="imageIndex" v-bind:class="imageIndex==0 ? 'active' : ''"></li>
+                    </template>
+                </ol>
+                <div class="carousel-inner">
+                    <template v-for="(image,imageIndex) in post.Carousel">
+                        <div v-bind:class="imageIndex==0 ? 'carousel-item active' : 'carousel-item'">
+                            <img v-bind:src="image" class="d-block w-100">
+                        </div>
+                    </template>
                 </div>
+                <a class="carousel-control-prev" href="#articleCousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#articleCousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
             </div>
         </div>
 
         <div id="article-summary-area" class="row">
             <template v-for="post in posts">
-                <div class="col-md-4">
-                    <div class="grid">
-                        <div class="entry-media" v-show="hasPreviewImage(post)">
-                            <img v-bind:src="post.PreviewImage" v-bind:alt="post.Title" v-show="hasPreviewImage(post)" class="post-preview-image">
-                        </div>
-                        <div class="entry-body">
-                            <span class="cat">{{ post.Category }}</span>
-                            <h3><a href="#" v-on:click="summaryClick(post)">{{ post.Title }}</a></h3>
-                            <p>{{ post.Preview }}</p>
-                            <div class="read-more-date">
-                                <a href="#" class="btn btn-primary" v-on:click="summaryClick(post)">Read More..</a>
-                                <span class="date">{{ post.Published }}</span>
-                            </div>
+                <div class="article-summary">
+                    <div class="entry-media" v-show="hasPreviewImage(post)">
+                        <img v-bind:src="post.PreviewImage" v-bind:alt="post.Title" v-show="hasPreviewImage(post)" class="post-preview-image">
+                    </div>
+                    <div class="entry-body">
+                        <span class="cat">{{ post.Category }}</span>
+                        <h3><a href="#" v-on:click="summaryClick(post)">{{ post.Title }}</a></h3>
+                        <p>{{ post.Preview }}</p>
+                        <div class="read-more-date">
+                            <a href="#" class="btn btn-primary" v-on:click="summaryClick(post)">Read More..</a>
+                            <span class="date">{{ post.Published }}</span>
                         </div>
                     </div>
                 </div>

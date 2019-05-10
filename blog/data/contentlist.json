@@ -1,6 +1,13 @@
 ﻿{
   "Articles": [
     {
+      "Title": "Removing Credentials From Source Code With Azure Key Vault",
+      "Filename": "AzureKeyVault.md",
+      "Category": "Development",
+      "Published": "2019-05-10",
+      "Preview": "A client I was working with had a requirement to not keep credentials in source code.  This is how you can solve this problem with Azure Key Vault."
+    },
+    {
       "Title": "Unit Testing EPiServer: Custom Visitor Group Criterion",
       "Filename": "UnitTestingEPiServer1.md",
       "Category": "Development",
