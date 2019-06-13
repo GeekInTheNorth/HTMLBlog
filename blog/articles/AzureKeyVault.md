@@ -79,6 +79,11 @@ If you have a Continuous Integration system in place with multiple environments 
 
 If you don't want to create an Azure Key Vault for development and test environments, you can instead create a secrets file and store outside of your project folder.  This does bring you back into the realms of having credentials in source code, so do consider carefully where this file will live.  Microsoft provide details for how to do this here: [Securely save secret application settings for a web application](https://docs.microsoft.com/en-us/azure/key-vault/vs-secure-secret-appsettings)
 
+Required nuget package:
+```
+Microsoft.Configuration.ConfigurationBuilders.UserSecrets
+```
+
 Example secrets file:
 
 ```xml
@@ -96,7 +101,8 @@ You would need to set your web.config transform files to point the configuration
 <configBuilders>
     <builders>
         <add name="Secrets"
-             secretsFile="C:\Users\AppData\MyWebApplication1\secret.xml" type="Microsoft.Configuration.ConfigurationBuilders.UserSecretsConfigBuilder,
+             userSecretsFile="C:\Users\AppData\MyWebApplication1\secret.xml"
+             type="Microsoft.Configuration.ConfigurationBuilders.UserSecretsConfigBuilder,
                 Microsoft.Configuration.ConfigurationBuilders, Version=1.0.0.0, Culture=neutral" />
     </builders>
 </configBuilders>
