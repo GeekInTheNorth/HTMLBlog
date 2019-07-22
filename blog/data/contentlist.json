@@ -5,14 +5,16 @@
       "Filename": "AzureKeyVault.md",
       "Category": "Development",
       "Published": "2019-05-10",
-      "Preview": "A client I was working with had a requirement to not keep credentials in source code.  This is how you can solve this problem with Azure Key Vault."
+      "Preview": "A client I was working with had a requirement to not keep credentials in source code.  This is how you can solve this problem with Azure Key Vault.",
+      "PreviewImage": "articles/images/Azure.png"
     },
     {
       "Title": "Unit Testing EPiServer: Custom Visitor Group Criterion",
       "Filename": "UnitTestingEPiServer1.md",
       "Category": "Development",
       "Published": "2018-09-29",
-      "Preview": "I needed to implement a new visitor group criterion for an EPiServer CMS website. As part of this work I was introducing unit testing into the project and wanted to make sure that all of my new classes were unit tested."
+      "Preview": "I needed to implement a new visitor group criterion for an EPiServer CMS website. As part of this work I was introducing unit testing into the project and wanted to make sure that all of my new classes were unit tested.",
+      "PreviewImage": "articles/images/episerver-logo.jpg"
     },
     {
       "Title": "Elastic Search: Boosting Exact Matches Over Partial Matches",

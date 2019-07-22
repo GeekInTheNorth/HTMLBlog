@@ -65,7 +65,7 @@ var articleApp = new Vue({
             this.post = postToDisplay;
 
             $("#article-area").show();
-            summaryApp.showCategoryArticles(this.post.Category, 3, false, this.post.Title);
+            summaryApp.showCategoryArticles(this.post.Category, 6, false, this.post.Title);
         },
         hasCarousel: function(){
             if (post.Corusel === undefined)
@@ -135,7 +135,7 @@ var categoryMenuApp = new Vue({
         menuClick: function (category){
             var limit = 9999;
             if (category == "Latest")
-                limit = 3;
+                limit = 6;
             summaryApp.showCategoryArticles(category, limit, true, null);
         }
     }
@@ -163,7 +163,7 @@ function LoadSite(data){
     }
 
     if (showHomePage)
-        summaryApp.showCategoryArticles("Latest", 3, true, null);
+        summaryApp.showCategoryArticles("Latest", 6, true, null);
 }
 
 function getUrlVar(varName){

@@ -47,9 +47,13 @@ az logout
 ### Manually Adding Azure Key Vault to your solution
 
 1. Use Nuget to add the following packages to your web project:
-    - Microsoft.Azure.KeyVault
-    - Microsoft.Azure.Services.AppAuthentication
-    - Microsoft.Configuration.ConfigurationBuilders.Azure**
+
+```nuget
+Microsoft.Azure.KeyVault
+Microsoft.Azure.Services.AppAuthentication
+Microsoft.Configuration.ConfigurationBuilders.Azure
+```
+
 2. Update your web.config with the following (Replacing *MyKeyVaultName* with the name of your own Azure Key Vault):
 
 ```XML
